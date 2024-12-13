@@ -1,4 +1,7 @@
 window.onload = () => {
+    loadCartFromLocalStorage();
+    updateCartView();
+
     let cart = document.getElementById("categories");
     cartCategories(cart);
 
@@ -273,6 +276,7 @@ function updateCartView() {
             const index = e.target.dataset.index;
             cart[index].quantity++;
             updateCartView();
+            saveCartToLocalStorage();
         })
     );
 
@@ -285,6 +289,7 @@ function updateCartView() {
                 cart.splice(index, 1);
             }
             updateCartView();
+            saveCartToLocalStorage(); 
         })
     );
 
@@ -293,6 +298,7 @@ function updateCartView() {
             const index = e.target.dataset.index;
             cart.splice(index, 1);
             updateCartView();
+            saveCartToLocalStorage(); 
         })
     );
 }
@@ -308,7 +314,9 @@ function addToCart(product) {
     }
 
     updateCartView();
+    saveCartToLocalStorage(); // Guardar cambios
 }
+
 
 // Función para mostrar el carrito
 function showCart() {
@@ -338,3 +346,15 @@ function realizarPedido() {
 // Asignar eventos
 document.getElementById("cerrarCarrito").addEventListener("click", closeCart);
 document.getElementById("realizarPedido").addEventListener("click", realizarPedido);
+// Almacena el carrito en localStorage
+function saveCartToLocalStorage() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Carga el carrito desde localStorage
+function loadCartFromLocalStorage() {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+}

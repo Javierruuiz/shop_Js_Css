@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/cb2a722609.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+                                                        <!-- Header -->
+<header class="header">
+    <div class="logo"><i class="fa-brands fa-google-wallet" style="color: #000000;"></i></div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <a href="#"><i class="fa-solid fa-user" style="color: #000000;"></i></a>
+      <a id="cart" href="#"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+      <div id="ventanaCarrito" style="display: none;"> 
+        <h2>Carrito de la compra</h2>
+        <ul id="listadoCarrito">
+          <button id="+">+</button>
+          <button id="-">-</button>
+          <button id="Eliminar">Eliminar</button>
+        </ul> 
+        <div id="carritoResumen">
+          <p>Total: <span id="carritoTotal">0.00</span> €</p>
+        </div>
+        <button id="realizarPedido">Realizar Pedido</button>
+        <button id="cerrarCarrito">Cerrar</button>
+      </div>
+    
+    </div>
+</header>
+                                                     <!-- Header -->
+
+                                                <!-- Contenido principal -->
+<div class="container">
+    
+</div>
+                                                <!-- Contenido principal -->
+                                                 <!-- Imágenes de productos -->
+    <section class="imagenPotada" id="home"> 
+        <div class="imagenPortada-truegoods"><img src="./fotos/fotoEntrada.png" alt="logo"></div>
+    </section>
+                                                <!-- Imágenes de productos -->
+    
+                                                <!-- Sección tipo carrusel -->
+<div class="titulo_categories"><h2>CATEGOTIES</h2></div>
+<section class="categories" id="categories"> 
+</section>
+                                                <!-- Sección tipo carrusel -->
+                                                    <!-- productos -->
+<div class="overlay" id="overlay">
+    <div class="overlay-content">
+        
+        <div id="overlay-products"></div>
+    </div>
+</div>
+                                                <!-- productos -->
+                                                 <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Receive our offers</h2>
+    <p>Subscribe to receive the latest news and promotions</p>
+    <input type="email" placeholder="Ingresa tu correo">
+    <button>Subscribe</button>
+  </section>
+                                                    <!-- Newsletter -->
+                                                    <!-- spinner -->
+<div id="loadingSpinner" style="display: none;">
+    <img src="./fotos/recarga.webp" alt="Cargando...">
+</div>
+
+                                                <!-- Footer con redes sociales -->
+ <footer id="footer">
+    <div class="footer-container">  
+        <div class="ayuda footer-info">
+            <h4>Ayuda</h4>
+            <div class="footer-text">
+                <ul>
+                    <li><a href="">Seguimiento de tu pedido</a></li>
+                    <li><a href="">Devoluciones y cambios</a></li>
+                    <li><a href="">Tarjetas Regalo</a></li>
+                    <li><a href="">Envíos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nosotros footer-info">
+            <h4>Nosotros</h4>
+            <div class="footer-text">
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <li><a href="">Condiciones Generales</a></li>
+                    <li><a href="">Información Empresa</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="legal footer-info">
+            <h4>Legal</h4>
+            <div class="footer-text">
+                <ul>
+                    <li><a href="">Aviso Legal</a></li>
+                    <li><a href="">Privacidad</a></li>
+                    <li><a href="">Política de Cookies</a></li>
+                    <li><a href="">Condiciones de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="metodos-rrss footer-info">
+            <div class="metodos footer-text">
+            <h4>Métodos de pago</h4>
+            <ul>
+                <li><i class="ri-visa-fill"></i></li>
+                <li><i class="ri-mastercard-fill"></i></li>
+                <li><i class="ri-paypal-fill"></i></li>
+            </ul>
+        </div>
+
+        <div class="rrss">
+            <ul>
+              <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+              <li><a href="#"><i i class="ri-instagram-fill"></i></a></li>
+              <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+              <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+                                        <!-- Footer con redes sociales -->
+</body>
+</html>
